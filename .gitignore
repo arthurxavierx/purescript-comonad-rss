@@ -1,0 +1,13 @@
+bower_components
+node_modules
+package-lock.json
+.pulp-cache
+output
+generated-docs
+.psc*
+.purs*
+.psa*
+.DS_Store
+*.zip
+
+public/index.js

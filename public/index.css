@@ -1,0 +1,99 @@
+.icon {
+  width: 15px;
+  height: 15px;
+}
+
+/** */
+.AppContainer {
+  display: flex;
+  flex-flow: row;
+  flex: 1;
+}
+
+aside {
+  background: #EDEDED;
+  flex: 0 0 200px;
+  padding: 1.5rem;
+}
+
+nav .Feed {
+  font-size: 1.3rem;
+  color: #454545;
+  letter-spacing: 0.02em;
+  line-height: 1.3em;
+  margin: 1.2rem 0;
+}
+
+nav .Feed > span {
+  margin-right: 0.6rem;
+  flex: 1;
+}
+
+nav .Feed > span:hover {
+  color: #000000;
+}
+
+nav .Feed > button {
+  color: #A7A7A7;
+  font-size: 2.4rem;
+}
+
+
+.Content {
+  padding: 2.4rem;
+  overflow-y: auto;
+}
+
+.PagesHeader {
+  justify-content: center;
+  margin: 1.8rem 0 2.4rem;
+}
+
+.PagesHeader .PageButton {
+  font-size: 1.6rem;
+  width: 2.4rem;
+  margin: 0 0.6rem;
+}
+
+.PagesHeader .PageButton.selected {
+  color: #222222;
+  text-decoration: underline;
+}
+
+.ModalOverlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Card {
+  background: #FFFFFF;
+  border-radius: 3px;
+  padding: 1.5rem 1.2rem 1.5rem;
+}
+
+.ItemPreview {
+  margin: 0.6rem 0 1.8rem;
+}
+
+.ItemPreview > h4 {
+  margin: 0 0 0.6rem;
+}
+
+.ItemPreview > p {
+  margin: 0 0 0.9rem;
+}
+
+.NoSelection {
+  font-size: 1.3rem;
+  color: #606060;
+  align-items: center;
+  justify-content: center;
+}

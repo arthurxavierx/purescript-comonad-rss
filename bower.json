@@ -1,0 +1,31 @@
+{
+  "name": "purescript-comonad-ui-todos",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output"
+  ],
+  "dependencies": {
+    "purescript-prelude": "^4.0.0",
+    "purescript-console": "^4.1.0",
+    "purescript-react": "^6.0.0",
+    "purescript-react-dom": "^6.0.0",
+    "purescript-functors": "^3.0.0",
+    "purescript-free": "^5.0.0",
+    "purescript-simple-json": "^4.0.0",
+    "purescript-aff": "^5.0.0",
+    "purescript-strings": "^4.0.0",
+    "purescript-day": "^10.0.0",
+    "purescript-smash": "https://github.com/arthurxavierx/purescript-smash.git#2e50474",
+    "purescript-filterable": "^3.0.0",
+    "purescript-record": "^1.0.0",
+    "purescript-web-dom": "^1.0.0",
+    "purescript-web-html": "^1.0.0",
+    "purescript-web-storage": "^2.0.0"
+  },
+  "devDependencies": {
+    "purescript-debug": "^4.0.0",
+    "purescript-psci-support": "^4.0.0"
+  }
+}

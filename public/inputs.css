@@ -1,0 +1,25 @@
+input {
+  margin: 0.3rem 0 1.2rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"] {
+  outline: none;
+  border: none;
+  border-bottom: 1.5px #606060 solid;
+
+  font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+  font-size: 1.3rem;
+  color: #222222;
+
+  padding: 0.6rem 0;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="search"]:focus {
+  border-bottom: 1.5px #222222 solid;
+}
