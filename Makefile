@@ -7,6 +7,9 @@ OUTPUT = $(OUTDIR)/index.js
 
 all: $(OUTPUT)
 
+deploy: $(OUTPUT)
+	npx gh-pages -d $(OUTDIR)
+
 build:
 	pulp build
 

@@ -19,3 +19,4 @@ make
 - [x] Load feeds from local storage;
 - [ ] Save new feeds to local storage;
 - [ ] Add link to original article in RSS items;
+- [ ] Improve initial loading.
