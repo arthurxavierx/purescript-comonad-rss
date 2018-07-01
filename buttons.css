@@ -1,0 +1,44 @@
+button,
+[role="link"]:hover,
+[role="button"]:hover {
+  cursor: pointer;
+}
+
+button {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 1.2rem 1.8rem;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  background: none;
+  color: #454545;
+}
+button:hover {
+  background: #EDEDED;
+}
+
+button.primary {
+  background: #606060;
+  color: #EDEDED;
+}
+button.primary:hover {
+  background: #454545;
+}
+
+button.icon {
+  font-size: 2.0rem;
+  font-weight: bold;
+  color: #606060;
+
+  outline: none;
+  border: none;
+  background: none;
+
+  display: inline-block;
+  padding: 0;
+  line-height: 0;
+}
+button.icon:hover {
+  color: #000000;
+}

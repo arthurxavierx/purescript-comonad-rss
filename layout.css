@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Source Sans Pro', 'Helvetica', 'Arial', sans-serif;
+  font-size: 62.5%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  height: 100%;
+}
+
+body {
+  background: #FFFFFF;
+
+  font-size: 1.5em;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #222222;
+
+  margin: 0;
+  min-height: 100%;
+}
+
+#app {
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+  height: 100vh;
+}
+
+.row {
+  display: flex;
+  flex-flow: row;
+}
+
+.column {
+  display: flex;
+  flex-flow: column;
+}
+
+.flex {
+  flex: 1;
+}
+
+hr {
+  height: 1px;
+  border: none;
+  background: #EDEDED;
+  margin: 1.5rem 0 1.8rem;
+}
