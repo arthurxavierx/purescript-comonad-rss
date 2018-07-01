@@ -62,10 +62,10 @@ component =
                 ]
             ]
 
-type WizardState = { url :: String, feed :: Maybe (Feed String) }
+type WizardState = { url :: String, loading :: Boolean, feed :: Maybe (Feed String) }
 
 init :: WizardState
-init = { url: "", feed: Nothing  }
+init = { url: "", loading: false, feed: Nothing  }
 
 type Wizard s = StoreT s Zipper
 type ModalContent = Wizard WizardState
@@ -91,7 +91,7 @@ wizard = StoreT (Tuple render init)
         ]
 
     page1 :: WizardState -> ReactUI ModalContent Comm
-    page1 { url } send _ =
+    page1 { url, loading } send _ =
       D.div'
         [ D.p' [ D.text "Please, insert the URL of a valid RSS feed:" ]
         , D.form
@@ -99,9 +99,10 @@ wizard = StoreT (Tuple render init)
             , P.onSubmit \e -> do
                 _ <- preventDefault e
                 launchAff_ do
+                  send (void $ modify (_ { loading = true }))
                   feedM <- parseURL url
                   send do
-                    _ <- modify (_ { feed = feedM })
+                    _ <- modify (_ { feed = feedM, loading = false })
                     hoistTransitionT lower Zipper.moveRight
             ]
             [ D.input
@@ -112,7 +113,9 @@ wizard = StoreT (Tuple render init)
                 , P.onChange \e -> launchAff_ $ send $ void $
                     modify (_ { url = value e })
                 ]
-            , D.button' [ D.text "Search" ]
+            , if loading
+                then D.img [ P.src "./loading.svg" ]
+                else D.button' [ D.text "Search" ]
             ]
         ]
 
